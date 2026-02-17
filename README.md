@@ -1,6 +1,12 @@
 # Catalyst — MRSD Capstone Website
 
-Static site — just HTML and CSS, no build tools.
+Static site — edit with LLMs.
+
+1. Find the `.html` page you want to change
+2. Dump it into an LLM with your requested changes
+3. Preview locally: `python3 -m http.server 8000`
+4. Make sure it looks good
+5. Push to `main`
 
 ## File Structure
 
@@ -34,13 +40,9 @@ python3 -m http.server 8000
 
 ## How It Works
 
-**Styling:** Single stylesheet at `css/style.css`. CMU red (`#C41230`) nav bar, max-width 900px centered layout, system fonts.
+**Styling:** Single stylesheet at `css/style.css`.
 
-**Navigation:** Each page has the same `<nav>` bar. The current page's link gets `class="active"`. If you add or rename a page, update the nav in every HTML file.
-
-**Documents (`documents.html`):** Flat list of links grouped by type. Point `href` to files in `assets/docs/` or external URLs.
-
-**Gallery (`media.html`):** Each photo is a `<figure>` with an `<img>` and `<figcaption>` inside `.gallery`.
+**Documents (`documents.html`):** Flat list of links grouped by type. Point `href` to files in `assets/docs/` or external URLs (like in Google Drive)
 
 ## Images
 
